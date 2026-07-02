@@ -1,6 +1,6 @@
 app:
-  package: com.transsnet.store
-  activity: com.afmobi.palmplay.home.MainActivity
+  package: com.example.demo
+  activity: com.example.demo.home.MainActivity
   install_path: ""
   reset_before_case: false
   restart_before_case: true
@@ -33,7 +33,7 @@ logcat:
   enabled: false
   clear_before_run: true
   filters:
-    package: com.transsnet.store
+    package: com.example.demo
     keywords: []
 
 security:

@@ -34,8 +34,8 @@ def _deep_merge(base: dict, override: dict) -> dict:
 class AppConfig:
     """Configuration for the application under test."""
 
-    package: str = "com.transsnet.store"
-    activity: str = "com.afmobi.palmplay.home.MainActivity"
+    package: str = "com.example.demo"
+    activity: str = "com.example.demo.home.MainActivity"
     install_path: str = ""
     reset_before_case: bool = False
     restart_before_case: bool = True
@@ -166,8 +166,8 @@ class Config:
 
         return cls(
             app=AppConfig(
-                package=_get(app_d, "package", "com.transsnet.store"),
-                activity=_get(app_d, "activity", "com.afmobi.palmplay.home.MainActivity"),
+                package=_get(app_d, "package", "com.example.demo"),
+                activity=_get(app_d, "activity", "com.example.demo.home.MainActivity"),
                 install_path=_get(app_d, "install_path", ""),
                 reset_before_case=_get(app_d, "reset_before_case", False),
                 restart_before_case=_get(app_d, "restart_before_case", True),

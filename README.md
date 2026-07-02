@@ -113,8 +113,8 @@ tests/
 
 ```yaml
 app:
-  package: com.transsnet.store
-  activity: com.afmobi.palmplay.home.MainActivity
+  package: com.example.demo
+  activity: com.example.demo.home.MainActivity
   restart_before_case: true   # 每个用例前重启 App
 
 logcat:
@@ -142,9 +142,9 @@ import pytest
 
 def test_login_success(context):
     context.app.restart()
-    context.click(id="com.transsnet.store:id/btn_login")
-    context.input_text(id="com.transsnet.store:id/et_username", value="user@example.com")
-    context.input_text(id="com.transsnet.store:id/et_password", value="password")
+    context.click(id="com.example.demo:id/btn_login")
+    context.input_text(id="com.example.demo:id/et_username", value="user@example.com")
+    context.input_text(id="com.example.demo:id/et_password", value="password")
     context.click(text="登录")
     context.assert_text_exists("首页", timeout=15)
 
@@ -215,7 +215,7 @@ rc, stdout, stderr = context.run_adb("shell", "getprop", "ro.build.version.relea
 from pages.base_page import BasePage
 
 class StoreHomePage(BasePage):
-    PKG = "com.transsnet.store"
+    PKG = "com.example.demo"
 
     def search(self, keyword: str) -> None:
         self.context.click(accessibility_id="search_icon")

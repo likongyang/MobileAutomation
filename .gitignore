@@ -1,0 +1,34 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging & Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# Test output & Pytest cache
+.pytest_cache/
+artifacts/
+junit.xml
+
+# User requested exclusions (ignoring contents of pages and tests)
+pages/*
+!pages/.gitkeep
+tests/*
+!tests/.gitkeep

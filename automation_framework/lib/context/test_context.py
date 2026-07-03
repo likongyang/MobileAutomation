@@ -36,12 +36,12 @@ class AppController:
     @property
     def package(self) -> str:
         """Return the configured app package name."""
-        return self._config.app.package
+        return self._appium.app_package
 
     @property
     def activity(self) -> str:
         """Return the configured app launch activity."""
-        return self._config.app.activity
+        return self._appium.app_activity
 
     def install(self, apk_path: str | None = None) -> None:
         """

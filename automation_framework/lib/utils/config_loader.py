@@ -164,10 +164,15 @@ class Config:
         appium_d: dict = d.get("appium", {})
         logcat_filters_d: dict = logcat_d.get("filters", {})
 
+        pkg = _get(app_d, "package", "")
+        act = _get(app_d, "activity", "")
+        if "/" in act:
+            pkg, act = act.split("/", 1)
+
         return cls(
             app=AppConfig(
-                package=_get(app_d, "package", ""),
-                activity=_get(app_d, "activity", ""),
+                package=pkg,
+                activity=act,
                 install_path=_get(app_d, "install_path", ""),
                 reset_before_case=_get(app_d, "reset_before_case", False),
                 restart_before_case=_get(app_d, "restart_before_case", True),

@@ -130,8 +130,8 @@ class TestContext:
 
         def test_login(context):
             context.app.restart()
-            context.click(id="com.example.demo:id/btn_login")
-            context.input_text(id="com.example.demo:id/et_username", value="user")
+            context.click(id="com.example.app:id/btn_login")
+            context.input_text(id="com.example.app:id/et_username", value="user")
             context.assert_text_exists("Home")
     """
 
